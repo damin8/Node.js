@@ -1,7 +1,14 @@
-const express = require('express')
-const app = express();
-const port = 3000
+const { odd, even } = require('./var')
+const checkNumber = require("./func")
 
-app.get('/', (req, res) => res.send("Hello Wolrd!!"))
+function checkStringOddOrEven(str) {
+    if (str.length % 2) {
+        return odd
+    }
+    else {
+        return even
+    }
+}
 
-app.listen(port, () => console.log(`App Listening at http://localhost:${port}`))
+console.log(checkNumber(10))
+console.log(checkStringOddOrEven('helloworld'))
